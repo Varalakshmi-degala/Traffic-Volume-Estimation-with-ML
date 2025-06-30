@@ -1,0 +1,122 @@
+# -*- coding: utf-8 -*-
+"""
+Spyder Editor
+
+This is a temporary script file.
+"""
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Traffic Volume Estimation</title>
+  <style>
+    body {
+      background-image: url('"C:\Traffic Volume Estimation Project\Flask\models\encoder.pkl.png"');
+/* Change this to your actual image file name */
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      margin: 50px auto;
+      width: 50%;
+      border-radius: 10px;
+    }
+    label, select, input {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    h2, h3 {
+      text-align: center;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Traffic Volume Estimation</h2>
+    <h3>Please enter the following details:</h3>
+
+    <form action="image1.png" method="post">
+      <label for="Holiday">Holiday</label>
+      <select id="Holiday" name="Holiday">
+        <option value="None">None</option>
+        <option value="Columbus Day">Columbus Day</option>
+        <option value="Thanksgiving Day">Thanksgiving Day</option>
+        <option value="Christmas Day">Christmas Day</option>
+        <option value="Washingtons birthday">Washingtons birthday</option>
+        <option value="Memorial Day">Memorial Day</option>
+        <option value="State fair">State fair</option>
+        <option value="Labor Day">Labor Day</option>
+        <option value="Martin luther king 3r Day">Martin Luther King 3rd Day</option>
+      </select>
+
+      <label for="temp">Temperature</label>
+      <input type="number" id="temp" name="temp" placeholder="Enter temperature" required>
+
+      <label for="rain">Rain (0 or 1)</label>
+      <input type="number" id="rain" name="rain" min="0" max="1" required>
+
+      <label for="snow">Snow (0 or 1)</label>
+      <input type="number" id="snow" name="snow" min="0" max="1" required>
+
+      <label for="weather">Weather</label>
+      <select id="weather" name="weather">
+        <option value="1">Clouds</option>
+        <option value="2">Clear</option>
+        <option value="3">Rain</option>
+        <option value="4">Drizzle</option>
+        <option value="5">Mist</option>
+        <option value="6">Fog</option>
+        <option value="7">Snow</option>
+        <option value="8">Sand</option>
+        <option value="9">Ash</option>
+        <option value="10">Thunderstorm</option>
+        <option value="11">Squall</option>
+        <option value="12">Smoke</option>
+      </select>
+
+      <label for="year">Year</label>
+      <input type="number" id="year" name="year" min="2012" max="2022" required>
+
+      <label for="month">Month</label>
+      <input type="number" id="month" name="month" min="1" max="12" required>
+
+      <label for="day">Day</label>
+      <input type="number" id="day" name="day" min="1" max="31" required>
+
+      <label for="hours">Hours</label>
+      <input type="number" id="hours" name="hours" min="0" max="23" required>
+
+      <label for="minutes">Minutes</label>
+      <input type="number" id="minutes" name="minutes" min="0" max="59" required>
+
+      <label for="seconds">Seconds</label>
+      <input type="number" id="seconds" name="seconds" min="0" max="59" required>
+
+      <br>
+      <button type="submit">Predict</button>
+    </form>
+
+    <br>
+    <div style="text-align:center; font-size:18px;">
+      {{ prediction_text }}
+    </div>
+  </div>
+
+</body>
+</html>
+
+
+
+
